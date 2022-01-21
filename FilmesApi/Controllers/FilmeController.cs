@@ -1,4 +1,5 @@
-﻿using FilmesApi.Date;
+﻿using AutoMapper;
+using FilmesApi.Date;
 using FilmesApi.Date.Dtos;
 using FilmesAPI.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -15,21 +16,18 @@ namespace FilmesApi.Controllers
     public class FilmeController : ControllerBase
     {
         private FilmeContext _context;
-        public FilmeController(FilmeContext context)
+        private IMapper _mapper;
+        public FilmeController(FilmeContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
         [HttpPost]
         public IActionResult AdicionaFilme([FromBody] CreateFilmesDto filmeDto)
         {
-            Filme filme = new Filme
-            {
-                Titulo = filmeDto.Titulo,
-                Genero = filmeDto.Genero,
-                Diretor = filmeDto.Diretor,
-                Duracao = filmeDto.Duracao
-            };
+            Filme filme = _mapper.Map<Filme>(filmeDto);
+        
             _context.Filmes.Add(filme);
             _context.SaveChanges();
             return CreatedAtAction(nameof(RecuperaFilmesPorId), new { Id = filme.Id }, filme);
@@ -47,14 +45,8 @@ namespace FilmesApi.Controllers
             Filme filme = _context.Filmes.FirstOrDefault(filme => filme.Id == id);
             if(filme != null)
             {
-                var filmeDto = new ReadFIlmesDto
-                {
-                    Titulo = filme.Titulo,
-                    Diretor = filme.Diretor,
-                    Genero = filme.Genero,
-                    Duracao = filme.Duracao,
-                    horaDaConsulta = DateTime.Now
-                };
+                var filmeDto = _mapper.Map<ReadFIlmesDto>(filme);
+           
                 return Ok(filmeDto);
             }
             return NotFound();
@@ -67,10 +59,7 @@ namespace FilmesApi.Controllers
             {
                 return NotFound();
             }
-            filme.Titulo = filmeDto.Titulo;
-            filme.Genero = filmeDto.Genero;
-            filme.Duracao = filmeDto.Duracao;
-            filme.Diretor = filmeDto.Diretor;
+            _mapper.Map(filmeDto, filme);
             _context.SaveChanges();
             return NoContent();
         }
