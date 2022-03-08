@@ -136,10 +136,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Cliente\LoginCliente.cs" />
+    <Compile Include="Cliente\Login.cs" />
     <Compile Include="Produto\Produto.cs" />
     <Compile Include="Requisições\requisicaoGet.cs" />
     <Compile Include="Requisições\RequisicaoPost.cs" />
+    <Compile Include="ValuesObjects\Cpf.cs" />
     <Compile Include="Vendas\Compras.cs" />
     <Compile Include="Vendedor\Vendedor.cs" />
     <EmbeddedResource Include="Forms\CadastroCliente.resx">
