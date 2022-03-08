@@ -10,7 +10,7 @@ namespace Loja.Requisições
 {
     public class requisicaoGet
     {
-        public static string fazGet(string rota)
+        public string fazGet(string rota)
         {
 
             System.Net.HttpWebRequest requisicao = (HttpWebRequest)WebRequest.Create($"https://localhost:5001/{rota}/");
@@ -33,10 +33,10 @@ namespace Loja.Requisições
             return sb.ToString();
         }
 
-        public static string fazGetNome(string nome)
+        public string fazGetEspecifico(string rota, string rotaComplementar)
         {
 
-            System.Net.HttpWebRequest requisicao = (HttpWebRequest)WebRequest.Create($"https://localhost:5001/Venda/{nome}");
+            System.Net.HttpWebRequest requisicao = (HttpWebRequest)WebRequest.Create($"https://localhost:5001/{rota}/{rotaComplementar}");
 
             HttpWebResponse resposta = (HttpWebResponse)requisicao.GetResponse();
 
@@ -55,5 +55,9 @@ namespace Loja.Requisições
             } while (cont > 0);
             return sb.ToString();
         }
+
+      
+
+     
     }
 }

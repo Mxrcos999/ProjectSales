@@ -1,7 +1,8 @@
-﻿using Loja.requisições;
+﻿using Loja.svc;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -20,7 +21,17 @@ namespace Loja.Forms
 
         private void BtnCadastrarCliente_Click(object sender, EventArgs e)
         {
-            var EnviaRequisicao = new RequisicaoPost();
+            try
+            {
+                SvcCliente.registraCliente(TxtNome.Text, TxtSobrenome.Text, TxtCpf.Text);
+
+            }
+            catch (ValidationException ex)
+            {
+                MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            /*var EnviaRequisicao = new RequisicaoPost();
             EnviaRequisicao.postCliente(TxtNome.Text, TxtSobrenome.Text, TxtCpf.Text, TxtDateTime.Text);
 
             if (EnviaRequisicao.status == true)
@@ -31,7 +42,7 @@ namespace Loja.Forms
             {
                 MessageBox.Show("Erro ao cadastrar cliente", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            }
+            }*/
         }
 
         private void label6_Click(object sender, EventArgs e)

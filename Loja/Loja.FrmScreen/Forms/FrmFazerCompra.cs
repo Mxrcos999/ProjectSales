@@ -1,6 +1,4 @@
-﻿using Loja.requisições;
-using Loja.Requisições;
-using Loja.Vendas;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,9 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static Loja.Cliente.Clientes;
-using static Loja.requisições.Produto;
-using static Loja.Vendas.Compras;
+
 
 namespace Loja.Forms
 {
@@ -32,13 +28,13 @@ namespace Loja.Forms
         public string dadoComposto { get; set; }
         private void FrmFazerCompra_Load(object sender, EventArgs e)
         {
-            string vjson = requisicaoGet.fazGet("produtos");
+        /*   string vjson = requisicaoGet.fazGet("produtos");
             ListaDeProdutos.produtos = ListaDeProdutos.DesSerializedClassUnit(vjson);
             foreach(var dados in ListaDeProdutos.produtos)
             {
                  dadoComposto = $"id: {dados.id} , nome do produto: {dados.nomeProduto} , quantidade disponivel: {dados.quantidadeProduto} , Valor R$ {dados.ValorProduto}";
                 CmbProdutos.Items.Add(dadoComposto);
-            }
+            }*/
 
 
         }
@@ -52,7 +48,7 @@ namespace Loja.Forms
 
         private void BtnComprar_Click(object sender, EventArgs e)
         {
-            var indice = CmbProdutos.SelectedIndex;
+          /*  var indice = CmbProdutos.SelectedIndex;
             string capturaTextoDeIndice = CmbProdutos.Items[indice].ToString();
             string[] subs = capturaTextoDeIndice.Split(' ');
             string nomeDoProduto = subs[6];
@@ -77,7 +73,7 @@ namespace Loja.Forms
             if(requisicao.status == true)
             {
                 MessageBox.Show("Compra feita com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            }*/
 
          
 

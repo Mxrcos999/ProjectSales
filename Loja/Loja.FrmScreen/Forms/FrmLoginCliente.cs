@@ -1,5 +1,4 @@
-﻿using Loja.requisições;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +18,7 @@ namespace Loja.Forms
         }
         private void BtnLoginCliente_Click(object sender, EventArgs e)
         {
-            var login = new Login();
+    /*        var login = new Login();
             //  login.fazGetLogin();
             if (login.loginCliente(TxtCpf.Text))
             {
@@ -32,7 +31,7 @@ namespace Loja.Forms
             else
             {
                 MessageBox.Show("Usuario não encontrado", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            }*/
         }
 
         private void LblVoltar_Click(object sender, EventArgs e)

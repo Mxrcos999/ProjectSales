@@ -1,6 +1,4 @@
-﻿using Loja.Cliente;
-using Loja.requisições;
-using Loja.Requisições;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,8 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static Loja.Cliente.Clientes;
-using static Loja.Vendas.Compras;
+
 
 namespace Loja.Forms
 {
@@ -29,7 +26,7 @@ namespace Loja.Forms
         }
         private void FrmVisualizarCompras_Load(object sender, EventArgs e)
         {
-           var jsonNome = Login.fazGetLoginCli(Cpf);
+       /*    var jsonNome = Login.fazGetLoginCli(Cpf);
             List<Clientes> Getnome = new List<Clientes>();
             Getnome = ListaDeClientes.DesSerializedClassUnit(jsonNome);
             
@@ -46,7 +43,7 @@ namespace Loja.Forms
             {
                 string dadoComposto = $"nome: {dado.nomeCliente}, produto comprado: {dado.nomeProduto}, quantidade comprada: {dado.quantidadeComprada}, valor pago: R$ {dado.ValorTotal}";
                 ListCompras.Items.Add(dadoComposto);
-            }
+            }*/ 
         }
     }
 }

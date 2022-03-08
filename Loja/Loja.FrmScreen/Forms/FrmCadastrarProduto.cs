@@ -1,9 +1,6 @@
-﻿using Loja.requisições;
-using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -24,7 +21,7 @@ namespace Loja.Forms
 
         private void BtnCadastra_Click(object sender, EventArgs e)
         {
-            try
+           /* try
             {
                 var enviaRequisicao = new RequisicaoPost();
                 enviaRequisicao.postProduto(TxtNomeProduto.Text, Convert.ToInt32(TxtQuantidadeProduto.Text), Convert.ToDecimal(TxtValorDoProduto.Text));
@@ -41,7 +38,7 @@ namespace Loja.Forms
             catch(ValidationException ex)
             {
                 MessageBox.Show(ex.Message, "erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            }*/
             
 
         }

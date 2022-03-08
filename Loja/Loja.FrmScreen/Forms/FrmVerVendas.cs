@@ -1,5 +1,4 @@
-﻿using Loja.Requisições;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static Loja.Vendas.Compras;
 
 namespace Loja.Forms
 {
@@ -21,7 +19,7 @@ namespace Loja.Forms
 
         private void FrmVerVendas_Load(object sender, EventArgs e)
         {
-            var requisicao = new requisicaoGet();
+     /*       var requisicao = new requisicaoGet();
             var vjson = requisicaoGet.fazGet("Venda");
             var lista = new ListaCompras();
             lista.listaDeCompras = ListaCompras.DesSerializedClassUnit(vjson);
@@ -30,7 +28,7 @@ namespace Loja.Forms
             {
                 string dadoComposto = $"nome: {dado.nomeCliente}, produto comprado: {dado.nomeProduto}, quantidade comprada: {dado.quantidadeComprada}, valor pago: R$ {dado.ValorTotal}";
                 ListVendas.Items.Add(dadoComposto);
-            }
+            }*/
         }
     }
 }

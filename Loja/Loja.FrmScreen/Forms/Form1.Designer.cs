@@ -101,7 +101,6 @@ namespace Loja
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Loja.Properties.Resources.vendedor;
             this.pictureBox1.Location = new System.Drawing.Point(12, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(80, 84);

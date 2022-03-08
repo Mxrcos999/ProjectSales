@@ -110,7 +110,6 @@ namespace Loja.Forms
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Loja.Properties.Resources.do_utilizador;
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(162, 94);

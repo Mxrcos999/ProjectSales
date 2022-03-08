@@ -1,5 +1,4 @@
-﻿using Loja.Utils.Vendedor;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,7 +19,7 @@ namespace Loja.Forms
 
         private void BtnLoginVendedor_Click(object sender, EventArgs e)
         {
-            var vendedor = new Vendedor();
+         /*   var vendedor = new Vendedor();
             if(vendedor.LoginVendedor(TxtNome.Text, TxtSenha.Text))
             {
                 MessageBox.Show("Login feito com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -33,7 +32,7 @@ namespace Loja.Forms
             {
                 MessageBox.Show("Usuario não encontrado", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            }
+            }*/
 
         }
 

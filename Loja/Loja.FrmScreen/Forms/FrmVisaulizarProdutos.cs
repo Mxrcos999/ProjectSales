@@ -1,6 +1,4 @@
-﻿using Loja.requisições;
-using Loja.Requisições;
-using Newtonsoft.Json;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,7 +10,6 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static Loja.requisições.Produto;
 
 namespace Loja.Forms
 {
@@ -26,10 +23,10 @@ namespace Loja.Forms
         private void FrmVisaulizarVendas_Load(object sender, EventArgs e)
         {
 
-    
+    /*
             string stringJson = requisicaoGet.fazGet("produtos");
           /*  var novoProduto = new ListaDeProdutos();
-            var novoProdutop = new Produto();*/
+            var novoProdutop = new Produto();
 
             ListaDeProdutos.produtos = ListaDeProdutos.DesSerializedClassUnit(stringJson);
 
@@ -39,7 +36,7 @@ namespace Loja.Forms
                 ListProdutos.Items.Add(dadoComposto);
             }
 
-
+            */
 
         }
         
