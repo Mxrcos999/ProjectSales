@@ -21,12 +21,13 @@ namespace Loja.Cliente
         [Required(ErrorMessage = "O campo Cpf é obrigatório.")]
 
         public string _Cpf { get; private set; }
-        public Clientes(string nome, string sobrenome, string cpf)
+        public DateTime DataNascimento { get; set; }
+        public Clientes(string nome, string sobrenome, string cpf, string data)
         {
             nomeCliente = nome.Trim();
             SobrenomeCliente = sobrenome.Trim();
-
-            Cpf.Valida(cpf);
+            DataNascimento = Convert.ToDateTime(data);
+        
             _Cpf = cpf;
 
             ValidationContext context = new ValidationContext(this, serviceProvider: null, items: null);
@@ -42,8 +43,11 @@ namespace Loja.Cliente
                     }
                     throw new ValidationException(sbrErrors.ToString());
                 }
-            
 
+            if (!Cpf.Valida(cpf))
+            {
+                throw new ArgumentException("Insira um cpf valido");
+            }
 
         }
         public class ListaDeClientes

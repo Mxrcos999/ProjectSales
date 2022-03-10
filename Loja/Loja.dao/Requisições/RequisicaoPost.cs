@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Loja.Cliente;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,8 @@ namespace Loja.requisições
     {
         public bool status { get; set; }
 
+
+       
         public async Task postProduto(string nomeProduto, int quantidadeproduto, decimal valorproduto)
         {
             try
@@ -33,18 +36,22 @@ namespace Loja.requisições
         }
 
 
-        public async Task postCliente(string nomeCliente, string sobrenome, string cpf, string dataNascimento)
+        public  async Task postCliente(Clientes cliente)
         {
+           
+          
             try
             {
                 status = true;
-
                 var httpClient = new HttpClient();
-                var objeto = new { nomeCliente = nomeCliente, sobrenomeCliente = sobrenome, Cpf = cpf, dataNascimento = dataNascimento };
+                var objeto = new { nomeCliente = cliente.nomeCliente, sobrenomeCliente = cliente.SobrenomeCliente, Cpf = cliente._Cpf, dataNascimento = cliente.DataNascimento };
 
                 var content = ToRequest(objeto);
                 var response = await httpClient.PostAsync("https://localhost:5001/Cliente", content);
+            
+
             }
+              
             catch (Exception)
             {
 

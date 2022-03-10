@@ -1,4 +1,4 @@
-﻿using Loja.Requisições;
+﻿
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -22,13 +22,13 @@ namespace Loja.requisições
         }
         public bool loginCliente(string cpfEscrito)
         {
-            var requisicao = new requisicaoGet();
-            string vjson = requisicao.fazGetEspecifico("cliente", cpfEscrito);
-            if (vjson == "[]")
-            {
-                return false;
+           // var requisicao = new requisicaoGet();
+         ////   string vjson = requisicao.fazGetEspecifico("cliente", cpfEscrito);
+         //   if (vjson == "[]")
+         //   {
+         //       return false;
 
-            }
+         //   }
             return true;
 
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Loja.svc;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,20 +19,30 @@ namespace Loja.Forms
         }
         private void BtnLoginCliente_Click(object sender, EventArgs e)
         {
-    /*        var login = new Login();
-            //  login.fazGetLogin();
-            if (login.loginCliente(TxtCpf.Text))
+            if (SvcCliente.getJson(TxtCpf.Text))
             {
-                MessageBox.Show("Login feito com sucesso", "Sucesso", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Login feito com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 var form = new FrmClienteDashbord();
                 form.recebeCpf(TxtCpf.Text);
                 this.Visible = false;
                 form.Show();
-            }
-            else
-            {
+            }else
                 MessageBox.Show("Usuario não encontrado", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }*/
+
+            /*        var login = new Login();
+                    //  login.fazGetLogin();
+                    if (login.loginCliente(TxtCpf.Text))
+                    {
+                        MessageBox.Show("Login feito com sucesso", "Sucesso", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        var form = new FrmClienteDashbord();
+                        form.recebeCpf(TxtCpf.Text);
+                        this.Visible = false;
+                        form.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usuario não encontrado", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }*/
         }
 
         private void LblVoltar_Click(object sender, EventArgs e)

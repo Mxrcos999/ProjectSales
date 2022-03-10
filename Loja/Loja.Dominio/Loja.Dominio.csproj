@@ -66,11 +66,5 @@
   <ItemGroup>
     <None Include="Resources\vendedor.png" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Loja.dao\Loja.dao.csproj">
-      <Project>{c7b4446e-6208-4371-90e6-21cf70cb84e3}</Project>
-      <Name>Loja.dao</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

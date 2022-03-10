@@ -35,13 +35,13 @@ namespace Loja.Forms
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.TxtNome = new System.Windows.Forms.TextBox();
-            this.TxtCpf = new System.Windows.Forms.TextBox();
             this.TxtSobrenome = new System.Windows.Forms.TextBox();
             this.BtnCadastrarCliente = new System.Windows.Forms.Button();
             this.LblButtonLogin = new System.Windows.Forms.Label();
             this.TxtDateTime = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.LblVoltar = new System.Windows.Forms.Label();
+            this.TxtCpf = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -98,13 +98,6 @@ namespace Loja.Forms
             this.TxtNome.Size = new System.Drawing.Size(100, 20);
             this.TxtNome.TabIndex = 5;
             // 
-            // TxtCpf
-            // 
-            this.TxtCpf.Location = new System.Drawing.Point(381, 253);
-            this.TxtCpf.Name = "TxtCpf";
-            this.TxtCpf.Size = new System.Drawing.Size(100, 20);
-            this.TxtCpf.TabIndex = 6;
-            // 
             // TxtSobrenome
             // 
             this.TxtSobrenome.Location = new System.Drawing.Point(381, 149);
@@ -139,6 +132,7 @@ namespace Loja.Forms
             // 
             // TxtDateTime
             // 
+            this.TxtDateTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.TxtDateTime.Location = new System.Drawing.Point(106, 253);
             this.TxtDateTime.Name = "TxtDateTime";
             this.TxtDateTime.Size = new System.Drawing.Size(100, 20);
@@ -170,19 +164,27 @@ namespace Loja.Forms
             this.LblVoltar.Text = "Voltar";
             this.LblVoltar.Click += new System.EventHandler(this.LblVoltar_Click);
             // 
+            // TxtCpf
+            // 
+            this.TxtCpf.Location = new System.Drawing.Point(381, 253);
+            this.TxtCpf.Mask = "000.000.000-00";
+            this.TxtCpf.Name = "TxtCpf";
+            this.TxtCpf.Size = new System.Drawing.Size(100, 20);
+            this.TxtCpf.TabIndex = 20;
+            // 
             // CadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(609, 468);
+            this.Controls.Add(this.TxtCpf);
             this.Controls.Add(this.LblVoltar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.TxtDateTime);
             this.Controls.Add(this.LblButtonLogin);
             this.Controls.Add(this.BtnCadastrarCliente);
             this.Controls.Add(this.TxtSobrenome);
-            this.Controls.Add(this.TxtCpf);
             this.Controls.Add(this.TxtNome);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -193,6 +195,7 @@ namespace Loja.Forms
             this.Name = "CadastroCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CadastroCliente";
+            this.Load += new System.EventHandler(this.CadastroCliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,12 +209,12 @@ namespace Loja.Forms
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox TxtNome;
-        private System.Windows.Forms.TextBox TxtCpf;
         private System.Windows.Forms.TextBox TxtSobrenome;
         private System.Windows.Forms.Button BtnCadastrarCliente;
         private System.Windows.Forms.Label LblButtonLogin;
         private System.Windows.Forms.DateTimePicker TxtDateTime;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label LblVoltar;
+        private System.Windows.Forms.MaskedTextBox TxtCpf;
     }
 }

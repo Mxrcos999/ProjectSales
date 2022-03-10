@@ -23,10 +23,15 @@ namespace Loja.Forms
         {
             try
             {
-                SvcCliente.registraCliente(TxtNome.Text, TxtSobrenome.Text, TxtCpf.Text);
+                SvcCliente.registraCliente(TxtNome.Text, TxtSobrenome.Text, TxtCpf.Text, TxtDateTime.Text);
 
             }
             catch (ValidationException ex)
+            {
+                MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            catch(ArgumentException ex)
             {
                 MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -62,6 +67,11 @@ namespace Loja.Forms
             var form = new FrmControleCliente();
             this.Visible = false;
             form.Show();
+        }
+
+        private void CadastroCliente_Load(object sender, EventArgs e)
+        {
+       
         }
     }
 }
