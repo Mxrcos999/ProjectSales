@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Loja.ValuesObjects
 {
   
-    public class Cpf
+    public class _Cpf
     {
         public static bool Valida(string cpf)
         {

@@ -1,4 +1,5 @@
 ﻿
+using Loja.svc;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,14 +29,12 @@ namespace Loja.Forms
         public string dadoComposto { get; set; }
         private void FrmFazerCompra_Load(object sender, EventArgs e)
         {
-        /*   string vjson = requisicaoGet.fazGet("produtos");
-            ListaDeProdutos.produtos = ListaDeProdutos.DesSerializedClassUnit(vjson);
-            foreach(var dados in ListaDeProdutos.produtos)
-            {
-                 dadoComposto = $"id: {dados.id} , nome do produto: {dados.nomeProduto} , quantidade disponivel: {dados.quantidadeProduto} , Valor R$ {dados.ValorProduto}";
-                CmbProdutos.Items.Add(dadoComposto);
-            }*/
 
+            foreach (var dados in SvcCliente.carregaDado())
+            {
+                dadoComposto = $"id: {dados.id} , nome do produto: {dados.nomeProduto} , quantidade disponivel: {dados.quantidadeProduto} , Valor R$ {dados.ValorProduto}";
+                CmbProdutos.Items.Add(dadoComposto);
+            }
 
         }
 

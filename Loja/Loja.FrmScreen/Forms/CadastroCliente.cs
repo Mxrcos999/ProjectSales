@@ -24,6 +24,7 @@ namespace Loja.Forms
             try
             {
                 SvcCliente.registraCliente(TxtNome.Text, TxtSobrenome.Text, TxtCpf.Text, TxtDateTime.Text);
+                MessageBox.Show("Cliente cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             catch (ValidationException ex)

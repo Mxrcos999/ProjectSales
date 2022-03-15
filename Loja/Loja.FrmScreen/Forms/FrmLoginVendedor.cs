@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Loja.svc;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,8 +20,7 @@ namespace Loja.Forms
 
         private void BtnLoginVendedor_Click(object sender, EventArgs e)
         {
-         /*   var vendedor = new Vendedor();
-            if(vendedor.LoginVendedor(TxtNome.Text, TxtSenha.Text))
+            if(SvcVendedor.LoginVendedor(TxtNome.Text, TxtSenha.Text))
             {
                 MessageBox.Show("Login feito com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 var form = new FrmVendedorDashBord();
@@ -29,14 +29,28 @@ namespace Loja.Forms
 
             }
             else
-            {
+            
                 MessageBox.Show("Usuario não encontrado", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            }*/
 
-        }
+                /*   var vendedor = new Vendedor();
+                   if(vendedor.LoginVendedor(TxtNome.Text, TxtSenha.Text))
+                   {
+                       MessageBox.Show("Login feito com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                       var form = new FrmVendedorDashBord();
+                       this.Visible = false;
+                       form.Show();
 
-        private void LblVoltar_Click(object sender, EventArgs e)
+                   }
+                   else
+                   {
+                       MessageBox.Show("Usuario não encontrado", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                   }*/
+
+            }
+
+            private void LblVoltar_Click(object sender, EventArgs e)
         {
             var form = new FrmControleCliente();
             this.Visible = false;

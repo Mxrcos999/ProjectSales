@@ -52,7 +52,7 @@
     <Compile Include="Cliente\Login.cs" />
     <Compile Include="Produto\Produto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ValuesObjects\Cpf.cs" />
+    <Compile Include="ValuesObjects\_Cpf.cs" />
     <Compile Include="Vendas\Compras.cs" />
     <Compile Include="Vendedor\Vendedor.cs" />
   </ItemGroup>

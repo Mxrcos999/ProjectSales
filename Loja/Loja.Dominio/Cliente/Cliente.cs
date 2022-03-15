@@ -11,7 +11,7 @@ namespace Loja.Cliente
 {
     public class Clientes
     {
-        //  public int id { get; set; }
+        public int id { get; set; }
         [Required(ErrorMessage = "O campo nome é obrigatório.")]
         [StringLength(50, ErrorMessage = "o campo nome deve conter no maximo 50 caracteres")]
         public string nomeCliente { get; set; }
@@ -20,15 +20,15 @@ namespace Loja.Cliente
         public string SobrenomeCliente { get; set; }
         [Required(ErrorMessage = "O campo Cpf é obrigatório.")]
 
-        public string _Cpf { get; private set; }
+        public string Cpf { get; private set; }
         public DateTime DataNascimento { get; set; }
-        public Clientes(string nome, string sobrenome, string cpf, string data)
+        public Clientes(string nomeCliente, string sobrenomeCliente, string cpf, string dataNascimento)
         {
-            nomeCliente = nome.Trim();
-            SobrenomeCliente = sobrenome.Trim();
-            DataNascimento = Convert.ToDateTime(data);
+            this.nomeCliente = nomeCliente.Trim();
+            SobrenomeCliente = sobrenomeCliente.Trim();
+            DataNascimento = Convert.ToDateTime(dataNascimento);
         
-            _Cpf = cpf;
+            Cpf = cpf;
 
             ValidationContext context = new ValidationContext(this, serviceProvider: null, items: null);
                 List<ValidationResult> results = new List<ValidationResult>();
@@ -44,7 +44,7 @@ namespace Loja.Cliente
                     throw new ValidationException(sbrErrors.ToString());
                 }
 
-            if (!Cpf.Valida(cpf))
+            if (!_Cpf.Valida(cpf))
             {
                 throw new ArgumentException("Insira um cpf valido");
             }
@@ -52,7 +52,7 @@ namespace Loja.Cliente
         }
         public class ListaDeClientes
         {
-            public List<Clientes> listaDeClientes { get; set; }
+            public static List<Clientes> listaDeClientes { get; set; }
 
             public static List<Clientes> DesSerializedClassUnit(string vJson)
             {

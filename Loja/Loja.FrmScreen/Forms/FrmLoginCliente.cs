@@ -19,7 +19,8 @@ namespace Loja.Forms
         }
         private void BtnLoginCliente_Click(object sender, EventArgs e)
         {
-            if (SvcCliente.getJson(TxtCpf.Text))
+            var svc = new SvcCliente();
+            if (svc.getJson(TxtCpf.Text))
             {
                 MessageBox.Show("Login feito com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 var form = new FrmClienteDashbord();

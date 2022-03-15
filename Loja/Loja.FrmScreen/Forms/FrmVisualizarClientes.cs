@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Loja.svc;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,17 +20,13 @@ namespace Loja.Forms
 
         private void FrmVisualizarClientes_Load(object sender, EventArgs e)
         {
-      /*      var requisicao = new Login();
-            string vjson = requisicao.fazGetLogin();
-            var lista = new ListaDeClientes();
-            lista.listaDeClientes = ListaDeClientes.DesSerializedClassUnit(vjson);
-
-            foreach (var dados in lista.listaDeClientes)
+            var svc = new SvcVendedor();
+            foreach (var dados in SvcVendedor.carregaDadosCliente())
             {
-                string dadoComposto = $"Id do cliente: {dados.id}, Nome do cliente: {dados.nomeCliente}, Sobrenome do cliente: {dados.SobrenomeCliente}, Cpf: {dados.Cpf}";
+                string dadoComposto = $"Nome do cliente: {dados.nomeCliente}, Sobrenome do cliente: {dados.SobrenomeCliente}, Cpf: {dados.Cpf}, Data de nascimento: {dados.DataNascimento.ToString(":d/M/yyyy")}";
                 ListClientes.Items.Add(dadoComposto);
-
-            }*/
+            }
+            
         }
 
         private void PnlVerCliente_Paint(object sender, PaintEventArgs e)

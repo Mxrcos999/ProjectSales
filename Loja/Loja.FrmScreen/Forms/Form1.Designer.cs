@@ -30,6 +30,7 @@ namespace Loja
         private void InitializeComponent()
         {
             this.PnlLateral = new System.Windows.Forms.Panel();
+            this.BtnDeslogar = new System.Windows.Forms.Button();
             this.LblExit = new System.Windows.Forms.Label();
             this.BtnVerClientes = new System.Windows.Forms.Button();
             this.BtnVisualizaVenda = new System.Windows.Forms.Button();
@@ -37,7 +38,6 @@ namespace Loja
             this.BtnVisualizarProdutos = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.pnlLoad = new System.Windows.Forms.Panel();
-            this.BtnDeslogar = new System.Windows.Forms.Button();
             this.PnlLateral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -57,6 +57,20 @@ namespace Loja
             this.PnlLateral.Name = "PnlLateral";
             this.PnlLateral.Size = new System.Drawing.Size(768, 87);
             this.PnlLateral.TabIndex = 0;
+            // 
+            // BtnDeslogar
+            // 
+            this.BtnDeslogar.BackColor = System.Drawing.Color.Transparent;
+            this.BtnDeslogar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnDeslogar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDeslogar.ForeColor = System.Drawing.Color.Red;
+            this.BtnDeslogar.Location = new System.Drawing.Point(712, 33);
+            this.BtnDeslogar.Name = "BtnDeslogar";
+            this.BtnDeslogar.Size = new System.Drawing.Size(53, 31);
+            this.BtnDeslogar.TabIndex = 8;
+            this.BtnDeslogar.Text = "Sair";
+            this.BtnDeslogar.UseVisualStyleBackColor = false;
+            this.BtnDeslogar.Click += new System.EventHandler(this.BtnDeslogar_Click);
             // 
             // LblExit
             // 
@@ -143,20 +157,6 @@ namespace Loja
             this.pnlLoad.Name = "pnlLoad";
             this.pnlLoad.Size = new System.Drawing.Size(768, 359);
             this.pnlLoad.TabIndex = 1;
-            // 
-            // BtnDeslogar
-            // 
-            this.BtnDeslogar.BackColor = System.Drawing.Color.Transparent;
-            this.BtnDeslogar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnDeslogar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDeslogar.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.BtnDeslogar.Location = new System.Drawing.Point(712, 33);
-            this.BtnDeslogar.Name = "BtnDeslogar";
-            this.BtnDeslogar.Size = new System.Drawing.Size(53, 31);
-            this.BtnDeslogar.TabIndex = 8;
-            this.BtnDeslogar.Text = "Sair";
-            this.BtnDeslogar.UseVisualStyleBackColor = false;
-            this.BtnDeslogar.Click += new System.EventHandler(this.BtnDeslogar_Click);
             // 
             // FrmVendedorDashBord
             // 

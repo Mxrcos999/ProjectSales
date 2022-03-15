@@ -32,6 +32,7 @@ namespace Controllers
 
             _context.clientes.Add(cliente);
             _context.SaveChanges();
+            
          //   return CreatedAtAction(nameof(RecuperaFilmesPorId), new { Id = filme.Id }, filme);
         }
 

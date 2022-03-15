@@ -11,18 +11,18 @@ namespace Loja.requisições
 {
     public class RequisicaoPost
     {
-        public bool status { get; set; }
+        public static bool status { get; set; }
 
 
        
-        public async Task postProduto(string nomeProduto, int quantidadeproduto, decimal valorproduto)
+        public async Task postProduto(string nome, int quantidade, decimal valor)
         {
             try
             {
-                status = true;
-
+               
+                
                 var httpClient = new HttpClient();
-                var objeto = new { nomeProduto = nomeProduto, quantidadeProduto = quantidadeproduto, valorProduto = valorproduto };
+                var objeto = new { nomeProduto = nome, quantidadeProduto = quantidade, valorProduto = valor };
 
                 var content = ToRequest(objeto);
                 var response = await httpClient.PostAsync("https://localhost:5001/Produtos", content);
@@ -44,7 +44,7 @@ namespace Loja.requisições
             {
                 status = true;
                 var httpClient = new HttpClient();
-                var objeto = new { nomeCliente = cliente.nomeCliente, sobrenomeCliente = cliente.SobrenomeCliente, Cpf = cliente._Cpf, dataNascimento = cliente.DataNascimento };
+                var objeto = new { nomeCliente = cliente.nomeCliente, sobrenomeCliente = cliente.SobrenomeCliente, Cpf = cliente.Cpf, dataNascimento = cliente.DataNascimento };
 
                 var content = ToRequest(objeto);
                 var response = await httpClient.PostAsync("https://localhost:5001/Cliente", content);

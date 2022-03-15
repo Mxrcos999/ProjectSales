@@ -17,7 +17,7 @@ namespace Loja.Vendas
 
         public class ListaCompras
         {
-            public List<Compras> listaDeCompras { get; set; }
+            public static List<Compras> listaDeCompras { get; set; }
 
             public static List<Compras> DesSerializedClassUnit(string vJson)
             {

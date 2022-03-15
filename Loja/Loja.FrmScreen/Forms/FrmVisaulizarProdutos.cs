@@ -1,4 +1,5 @@
 ﻿
+using Loja.svc;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,30 +23,20 @@ namespace Loja.Forms
 
         private void FrmVisaulizarVendas_Load(object sender, EventArgs e)
         {
-
-    /*
-            string stringJson = requisicaoGet.fazGet("produtos");
-          /*  var novoProduto = new ListaDeProdutos();
-            var novoProdutop = new Produto();
-
-            ListaDeProdutos.produtos = ListaDeProdutos.DesSerializedClassUnit(stringJson);
-
-            foreach(var dados in ListaDeProdutos.produtos)
+            var svc = new SvcVendedor();
+            foreach (var dados in SvcVendedor.carregaDadoProduto())
             {
-                string dadoComposto = $"id do produto: {dados.id}, nome do produto: {dados.nomeProduto} ,quantidade de produtos: {dados.quantidadeProduto}, Valor produto: {dados.ValorProduto} ";
+                string dadoComposto = $" nome do produto: {dados.nomeProduto} ,quantidade de produtos: {dados.quantidadeProduto}, Valor produto: {dados.ValorProduto} ";
                 ListProdutos.Items.Add(dadoComposto);
             }
-
-            */
-
+    
         }
         
 
         private void produtosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-         /*   this.produtosBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.produtosDbDataSet);*/
+
 
         }
 
