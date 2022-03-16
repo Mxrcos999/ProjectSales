@@ -79,6 +79,30 @@ namespace Loja.svc
 
 
         }
+        public  bool realizaCompra(string nomeProduto, string quantidade, decimal valor)
+        {
+            try
+            {
+                var requisicaoPost = new RequisicaoPost();
+                requisicaoPost.postCompra(Nome, nomeProduto, Convert.ToInt32(quantidade), valor);
+                return true;
+            }
+            catch (Exception)
+            {
+                
+                return false;
+            }
+            
+
+        }
+        public List<Compras> ListaDeComprasCliente()
+        {
+
+            var requisicao = new requisicaoGet();
+            var json = requisicao.fazGetEspecifico("Venda", Nome);
+            ListaCompras.listaDeCompras = ListaCompras.DesSerializedClassUnit(json);
+            return ListaCompras.listaDeCompras;
+        }
 
 
 

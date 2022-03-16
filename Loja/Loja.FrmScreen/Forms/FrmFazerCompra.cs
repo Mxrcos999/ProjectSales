@@ -44,38 +44,46 @@ namespace Loja.Forms
         }
 
       
-
+        
         private void BtnComprar_Click(object sender, EventArgs e)
         {
-          /*  var indice = CmbProdutos.SelectedIndex;
+            var svc = new SvcCliente();
+            
+            var indice = CmbProdutos.SelectedIndex;
             string capturaTextoDeIndice = CmbProdutos.Items[indice].ToString();
             string[] subs = capturaTextoDeIndice.Split(' ');
             string nomeDoProduto = subs[6];
             string quantidadeProduto = subs[10];
-            double valor = Convert.ToDouble(subs[14]);
+            decimal valor = Convert.ToDecimal(subs[14]);
+            svc.getNomeCliente(Cpf);
 
-            double valorTotal = Convert.ToDouble(TxtQuantidade.Text) * valor ;
-           
-
-            string vjson = Login.fazGetLoginCli(Cpf);
-            var listaCompras = new ListaCompras();
-            listaCompras.listaDeCompras = ListaCompras.DesSerializedClassUnit(vjson);
-            var requisicao = new RequisicaoPost();
-            var enviaNome = new FrmVisualizarCompras();
-            enviaNome.recebeCpf(Cpf);
-
-            foreach (var dado in listaCompras.listaDeCompras)
-            {
-                requisicao.postCompra(dado.nomeCliente, nomeDoProduto, Convert.ToInt32(TxtQuantidade.Text), Convert.ToDecimal(valorTotal));
-
-            }
-            if(requisicao.status == true)
+            decimal valorTotal = Convert.ToInt32(TxtQuantidade.Text) * valor ;
+            if (svc.realizaCompra(nomeDoProduto, quantidadeProduto, valorTotal))
             {
                 MessageBox.Show("Compra feita com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }*/
+            }
+                 MessageBox.Show("Erro ao efetuar compra", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-         
 
+                //string vjson = Login.fazGetLoginCli(Cpf);
+                //var listaCompras = new ListaCompras();
+                //listaCompras.listaDeCompras = ListaCompras.DesSerializedClassUnit(vjson);
+                //var requisicao = new RequisicaoPost();
+                //var enviaNome = new FrmVisualizarCompras();
+                //enviaNome.recebeCpf(Cpf);
+
+                //foreach (var dado in listaCompras.listaDeCompras)
+                //{
+                //    requisicao.postCompra(dado.nomeCliente, nomeDoProduto, Convert.ToInt32(TxtQuantidade.Text), Convert.ToDecimal(valorTotal));
+
+                //}
+                //if(requisicao.status == true)
+                //{
+                //    MessageBox.Show("Compra feita com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //}*/
+
+
+
+            }
         }
-    }
 }
