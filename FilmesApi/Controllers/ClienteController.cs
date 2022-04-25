@@ -23,27 +23,20 @@ namespace Controllers
 
         }
 
-        //[HttpGet]
-        //public IActionResult RecuperaClientes()
-        //{
-        //  //  return Ok(_context.clientes);
-        //}
+        [HttpGet]
+        public IActionResult RecuperaClientes()
+        {
+            return Ok(_Icliente.GetCliente());
+            
+           
+        }
 
-        //[HttpGet("{Cpf}")]
-        //public IActionResult recuperaClientePorNome(string cpf)
-        //{
-        //  /*  var cliente = _context.clientes;
-
-        //    if (cliente != null)
-        //    {
-
-
-        //        return Ok(_context.clientes
-        //         .Where(x => x.Cpf == cpf ));
-        //    }
-        //    return NotFound();*/
-        //}
+        [HttpGet("{Cpf}")]
+        public IActionResult recuperaClientePorCpf(string Cpf)
+        {
+            return Ok(_Icliente.GetClienteCpf(Cpf));
+        }
 
     }
-    
+
 }
