@@ -28,7 +28,7 @@ namespace Controllers
         [HttpPost]
         public void AdicionaVenda(CreateVendaDto vendaDto)
         {
-            vendas venda = _mapper.Map<vendas>(vendaDto);
+            Vendas venda = _mapper.Map<Vendas>(vendaDto);
 
             _context.vendas.Add(venda);
             _context.SaveChanges();

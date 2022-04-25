@@ -15,8 +15,8 @@ namespace models
     {
         public produtoProfile()
         {
-            CreateMap<CreateProdutoDto, produto>();
-            CreateMap<produto, ReadProdutoDto>();
+            CreateMap<CreateProdutoDto, Produtos>();
+            CreateMap<Produtos, ReadProdutoDto>();
         }
     }
 }

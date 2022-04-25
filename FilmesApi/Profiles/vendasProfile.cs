@@ -11,12 +11,12 @@ using System.Threading.Tasks;
 
 namespace models
 {
-    public class vendasProfile : Profile
+    public class VendasProfile : Profile
     {
-        public vendasProfile()
+        public VendasProfile()
         {
-            CreateMap<CreateVendaDto, vendas>();
-            CreateMap<vendas, ReadVendaDto>();
+            CreateMap<CreateVendaDto, Vendas>();
+            CreateMap<Vendas, ReadVendaDto>();
         }
     }
 }

@@ -1,16 +1,6 @@
-using AutoMapper;
-using data.dtos;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using VendasApi.svc;
+using VendasApi.Interface;
 
 namespace Controllers
 {
@@ -19,17 +9,17 @@ namespace Controllers
     public class ClienteController : ControllerBase
     {
 
-        private ClienteSvc _svc;
-        public ClienteController(ClienteSvc svc)
+        private readonly ICliente _Icliente;
+        public ClienteController(ICliente cliente)
         {
 
-            _svc = svc;
+            _Icliente = cliente;
         }
 
         [HttpPost]
         public void AdicionaCliente(CreateClienteDto clienteDto)
         {
-            _svc.AdicionaCliente(clienteDto);
+            _Icliente.SaveCliente(clienteDto);
 
         }
 

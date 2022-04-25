@@ -28,7 +28,7 @@ namespace Controllers
         [HttpPost]
         public void AdicionaProduto( CreateProdutoDto produtoDto)
         {
-            produto produto = _mapper.Map<produto>(produtoDto);
+            Produtos produto = _mapper.Map<Produtos>(produtoDto);
 
             _context.Produtos.Add(produto);
             _context.SaveChanges();
@@ -45,7 +45,7 @@ namespace Controllers
         [HttpGet("{id}")]
         public IActionResult recuperaProdutoPorId(int id)
         {
-            produto produto = _context.Produtos.FirstOrDefault(produto => produto.id == id);
+            Produtos produto = _context.Produtos.FirstOrDefault(Produtos => Produtos.id == id);
             if(produto != null)
             {
                 var produtoDto = _mapper.Map<ReadProdutoDto>(produto);
