@@ -125,6 +125,7 @@ namespace Loja.Forms
             this.Name = "FrmLoginVendedor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmLoginVendedor";
+            this.Load += new System.EventHandler(this.FrmLoginVendedor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

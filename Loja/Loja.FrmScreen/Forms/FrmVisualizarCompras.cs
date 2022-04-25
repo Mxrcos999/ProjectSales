@@ -34,24 +34,6 @@ namespace Loja.Forms
                 ListCompras.Items.Add(dadoComposto);
             }
 
-            /*    var jsonNome = Login.fazGetLoginCli(Cpf);
-                 List<Clientes> Getnome = new List<Clientes>();
-                 Getnome = ListaDeClientes.DesSerializedClassUnit(jsonNome);
-
-                 foreach(var nomeCliente in Getnome)
-                 {
-                     nome = nomeCliente.nomeCliente;
-                 }
-                 var vjson = requisicaoGet.fazGetNome(nome);
-                 var listaa = new ListaCompras();
-
-                 listaa.listaDeCompras = ListaCompras.DesSerializedClassUnit(vjson);
-
-                 foreach(var dado in listaa.listaDeCompras)
-                 {
-                     string dadoComposto = $"nome: {dado.nomeCliente}, produto comprado: {dado.nomeProduto}, quantidade comprada: {dado.quantidadeComprada}, valor pago: R$ {dado.ValorTotal}";
-                     ListCompras.Items.Add(dadoComposto);
-                 }*/
         }
     }
 }

@@ -27,16 +27,7 @@ namespace Loja.Forms
                 string dadoComposto = $"nome: {dado.nomeCliente}, produto comprado: {dado.nomeProduto}, quantidade comprada: {dado.quantidadeComprada}, valor pago: R$ {dado.ValorTotal}";
                 ListVendas.Items.Add(dadoComposto);
             }
-            /*       var requisicao = new requisicaoGet();
-                   var vjson = requisicaoGet.fazGet("Venda");
-                   var lista = new ListaCompras();
-                   lista.listaDeCompras = ListaCompras.DesSerializedClassUnit(vjson);
-
-                   foreach (var dado in lista.listaDeCompras)
-                   {
-                       string dadoComposto = $"nome: {dado.nomeCliente}, produto comprado: {dado.nomeProduto}, quantidade comprada: {dado.quantidadeComprada}, valor pago: R$ {dado.ValorTotal}";
-                       ListVendas.Items.Add(dadoComposto);
-                   }*/
+          
         }
     }
 }

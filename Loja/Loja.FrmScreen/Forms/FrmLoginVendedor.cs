@@ -32,22 +32,6 @@ namespace Loja.Forms
             
                 MessageBox.Show("Usuario não encontrado", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-
-                /*   var vendedor = new Vendedor();
-                   if(vendedor.LoginVendedor(TxtNome.Text, TxtSenha.Text))
-                   {
-                       MessageBox.Show("Login feito com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                       var form = new FrmVendedorDashBord();
-                       this.Visible = false;
-                       form.Show();
-
-                   }
-                   else
-                   {
-                       MessageBox.Show("Usuario não encontrado", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                   }*/
-
             }
 
             private void LblVoltar_Click(object sender, EventArgs e)
@@ -55,6 +39,11 @@ namespace Loja.Forms
             var form = new FrmControleCliente();
             this.Visible = false;
             form.Show();
+        }
+
+        private void FrmLoginVendedor_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

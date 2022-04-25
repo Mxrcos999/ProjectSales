@@ -99,6 +99,7 @@ namespace Loja.Forms
             this.Name = "FrmControleCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmControleCliente";
+            this.Load += new System.EventHandler(this.FrmControleCliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

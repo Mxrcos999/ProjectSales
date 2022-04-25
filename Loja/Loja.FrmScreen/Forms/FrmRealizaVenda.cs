@@ -21,5 +21,10 @@ namespace Loja.Forms
         {
 
         }
+
+        private void FrmRealizaVenda_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

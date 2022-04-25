@@ -18,7 +18,7 @@ namespace models
         public string nomeProduto { get; set; }
         public int quantidadeProduto { get; set; }
         public decimal valorProduto { get; set; }
+        public Clientes Clientes { get; set; }
 
-       
     }
 }

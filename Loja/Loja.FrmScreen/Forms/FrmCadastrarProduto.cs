@@ -49,28 +49,13 @@ namespace Loja.Forms
 
                 throw;
             }
-            
-           /* try
-            {
-                var enviaRequisicao = new RequisicaoPost();
-                enviaRequisicao.postProduto(TxtNomeProduto.Text, Convert.ToInt32(TxtQuantidadeProduto.Text), Convert.ToDecimal(TxtValorDoProduto.Text));
-                if (enviaRequisicao.status == true)
-                {
-                    MessageBox.Show("Produto criado com sucesso", "sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("erro ao criar produto", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                }
-            }
-            catch(ValidationException ex)
-            {
-                MessageBox.Show(ex.Message, "erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }*/
-            
+           
 
         }
-   
+
+        private void FrmCadastrarProduto_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

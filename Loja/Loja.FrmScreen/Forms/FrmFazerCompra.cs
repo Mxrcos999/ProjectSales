@@ -62,26 +62,6 @@ namespace Loja.Forms
             {
                 MessageBox.Show("Compra feita com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-                 MessageBox.Show("Erro ao efetuar compra", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-
-                //string vjson = Login.fazGetLoginCli(Cpf);
-                //var listaCompras = new ListaCompras();
-                //listaCompras.listaDeCompras = ListaCompras.DesSerializedClassUnit(vjson);
-                //var requisicao = new RequisicaoPost();
-                //var enviaNome = new FrmVisualizarCompras();
-                //enviaNome.recebeCpf(Cpf);
-
-                //foreach (var dado in listaCompras.listaDeCompras)
-                //{
-                //    requisicao.postCompra(dado.nomeCliente, nomeDoProduto, Convert.ToInt32(TxtQuantidade.Text), Convert.ToDecimal(valorTotal));
-
-                //}
-                //if(requisicao.status == true)
-                //{
-                //    MessageBox.Show("Compra feita com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //}*/
-
 
 
             }

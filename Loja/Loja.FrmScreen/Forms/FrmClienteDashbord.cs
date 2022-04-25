@@ -59,5 +59,10 @@ namespace Loja.Forms
             this.Visible = false;
             form.Show();
         }
+
+        private void PnlLoad_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

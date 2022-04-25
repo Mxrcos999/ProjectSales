@@ -140,6 +140,7 @@ namespace Loja.Forms
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmCadastrarProduto";
             this.Text = "FrmCadastrarProduto";
+            this.Load += new System.EventHandler(this.FrmCadastrarProduto_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

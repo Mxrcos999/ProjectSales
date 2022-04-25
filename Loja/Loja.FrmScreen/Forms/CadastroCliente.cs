@@ -37,18 +37,6 @@ namespace Loja.Forms
                 MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
-            /*var EnviaRequisicao = new RequisicaoPost();
-            EnviaRequisicao.postCliente(TxtNome.Text, TxtSobrenome.Text, TxtCpf.Text, TxtDateTime.Text);
-
-            if (EnviaRequisicao.status == true)
-            {
-                MessageBox.Show("Cliente cadastrado com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("Erro ao cadastrar cliente", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }*/
         }
 
         private void label6_Click(object sender, EventArgs e)

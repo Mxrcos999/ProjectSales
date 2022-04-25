@@ -103,6 +103,7 @@ namespace Loja.Forms
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmRealizaVenda";
             this.Text = "FrmRealizaVenda";
+            this.Load += new System.EventHandler(this.FrmRealizaVenda_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

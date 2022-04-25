@@ -48,7 +48,7 @@ namespace Loja.requisições
 
                 var content = ToRequest(objeto);
                 var response = await httpClient.PostAsync("https://localhost:5001/Cliente", content);
-            
+  
 
             }
               

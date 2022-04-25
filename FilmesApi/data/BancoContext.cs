@@ -15,6 +15,12 @@ namespace models
         public BancoContext(DbContextOptions<BancoContext> opt) : base(opt) 
         {
 
+
+        }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+          
         }
 
         public DbSet<produto> Produtos { get; set; }

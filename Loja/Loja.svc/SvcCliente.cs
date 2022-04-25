@@ -17,7 +17,6 @@ namespace Loja.svc
 {
     public class SvcCliente
     {
-        //        public string _Cpf { get; set; }
         public string Nome { get; set; }
         public static void registraCliente(string nome, string sobrenome, string cpf, string data)
         {
@@ -30,9 +29,7 @@ namespace Loja.svc
  
         }
         public bool getJson(string cpf)
-        {
-              //_Cpf = cpf;
-         
+        {         
                 var requisicao = new requisicaoGet();
                 string vjson = requisicao.fazGetEspecifico("cliente", cpf);
                 if (vjson == "[]")
@@ -73,7 +70,6 @@ namespace Loja.svc
         {
             var requisicao = new requisicaoGet();
 
-            //requisicao.fazGetEspecifico("clientes", nome);
             var json = requisicao.fazGetEspecifico("venda", Nome);
             return ListaCompras.DesSerializedClassUnit(json);
 

@@ -30,20 +30,6 @@ namespace Loja.Forms
             }else
                 MessageBox.Show("Usuario não encontrado", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            /*        var login = new Login();
-                    //  login.fazGetLogin();
-                    if (login.loginCliente(TxtCpf.Text))
-                    {
-                        MessageBox.Show("Login feito com sucesso", "Sucesso", MessageBoxButtons.OK,MessageBoxIcon.Information);
-                        var form = new FrmClienteDashbord();
-                        form.recebeCpf(TxtCpf.Text);
-                        this.Visible = false;
-                        form.Show();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Usuario não encontrado", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }*/
         }
 
         private void LblVoltar_Click(object sender, EventArgs e)
@@ -51,6 +37,11 @@ namespace Loja.Forms
             var form = new FrmControleCliente();
             this.Visible = false;
             form.Show();
+        }
+
+        private void FrmLoginCliente_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -157,6 +157,7 @@ namespace Loja
             this.pnlLoad.Name = "pnlLoad";
             this.pnlLoad.Size = new System.Drawing.Size(768, 359);
             this.pnlLoad.TabIndex = 1;
+            this.pnlLoad.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlLoad_Paint);
             // 
             // FrmVendedorDashBord
             // 

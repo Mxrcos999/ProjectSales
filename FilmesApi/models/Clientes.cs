@@ -19,5 +19,7 @@ namespace models
         public string sobrenomeCliente { get; set; }
         public string Cpf { get; set; }
         public string dataNascimento { get; set; }
+        public produto Produto { get; set; }
+        public int ProdutoId { get; set; }
     }
 }

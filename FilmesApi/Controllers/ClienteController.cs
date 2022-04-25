@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using VendasApi.svc;
 
 namespace Controllers
 {
@@ -17,46 +18,42 @@ namespace Controllers
     [Route("[controller]")]
     public class ClienteController : ControllerBase
     {
-        private BancoContext _context;
-        private IMapper _mapper;
-        public ClienteController(BancoContext context, IMapper mapper)
+
+        private ClienteSvc _svc;
+        public ClienteController(ClienteSvc svc)
         {
-            _context = context;
-            _mapper = mapper;
+
+            _svc = svc;
         }
 
         [HttpPost]
         public void AdicionaCliente(CreateClienteDto clienteDto)
         {
-            Clientes cliente = _mapper.Map<Clientes>(clienteDto);
+            _svc.AdicionaCliente(clienteDto);
 
-            _context.clientes.Add(cliente);
-            _context.SaveChanges();
-            
-         //   return CreatedAtAction(nameof(RecuperaFilmesPorId), new { Id = filme.Id }, filme);
         }
 
-        [HttpGet]
-        public IActionResult RecuperaClientes()
-        {
-            return Ok(_context.clientes);
-        }
+        //[HttpGet]
+        //public IActionResult RecuperaClientes()
+        //{
+        //  //  return Ok(_context.clientes);
+        //}
 
-        [HttpGet("{Cpf}")]
-        public IActionResult recuperaClientePorNome(string cpf)
-        {
-            var cliente = _context.clientes;
-                
-            if (cliente != null)
-            {
-                
+        //[HttpGet("{Cpf}")]
+        //public IActionResult recuperaClientePorNome(string cpf)
+        //{
+        //  /*  var cliente = _context.clientes;
 
-                return Ok(_context.clientes
-                 .Where(x => x.Cpf == cpf ));
-            }
-            return NotFound();
-        }
-   
+        //    if (cliente != null)
+        //    {
+
+
+        //        return Ok(_context.clientes
+        //         .Where(x => x.Cpf == cpf ));
+        //    }
+        //    return NotFound();*/
+        //}
 
     }
+    
 }

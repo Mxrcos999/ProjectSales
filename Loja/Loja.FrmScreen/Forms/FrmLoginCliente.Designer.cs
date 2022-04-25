@@ -104,6 +104,7 @@ namespace Loja.Forms
             this.Name = "FrmLoginCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmLoginCliente";
+            this.Load += new System.EventHandler(this.FrmLoginCliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

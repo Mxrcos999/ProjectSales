@@ -40,5 +40,10 @@ namespace Loja.Forms
             this.Visible = false;
             form.Show();
         }
+
+        private void FrmControleCliente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

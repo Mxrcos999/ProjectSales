@@ -125,6 +125,7 @@ namespace Loja.Forms
             this.PnlLoad.Name = "PnlLoad";
             this.PnlLoad.Size = new System.Drawing.Size(700, 346);
             this.PnlLoad.TabIndex = 1;
+            this.PnlLoad.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlLoad_Paint);
             // 
             // FrmClienteDashbord
             // 
